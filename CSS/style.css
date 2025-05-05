@@ -46,3 +46,40 @@
 .main-link-nav.nav-cta:active {
   background-color: #c95f30;
 }
+
+/* ///// MAIN SECTION ///// */
+/* KIM JESTEM */
+.section-hero {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+}
+
+.left-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.hero-description {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  margin-bottom: 4.4rem;
+}
+
+.header-img {
+  height: 40%;
+}
+
+/* PO CO MI STRONA? */
+.section-why {
+  height: 10rem;
+  background-color: #251b43;
+}
