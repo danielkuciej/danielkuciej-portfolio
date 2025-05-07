@@ -83,3 +83,45 @@
 .hero-img {
   width: 80%;
 }
+
+/* PO CO MI STRONA? */
+.section-why {
+  height: 100vh;
+  background-color: #251b43;
+  padding-top: 9.6rem;
+}
+
+.content-bar {
+  margin: 0 auto;
+  border-radius: 50px;
+  border: 1px solid #b2beed;
+  max-width: 80rem;
+  background-color: rgba(13, 2, 46, 0.8);
+}
+
+.content-bar-list {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2.4rem;
+}
+
+.content-bar-list li {
+  flex: 1;
+}
+
+.content-bar-link:link,
+.content-bar-link:visited {
+  display: block;
+  text-align: center;
+  color: #b2beed;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 2.2rem;
+}
+
+.active {
+  outline: 1px solid #b2beed;
+  border-radius: 50px;
+}
