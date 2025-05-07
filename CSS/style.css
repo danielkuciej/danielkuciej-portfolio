@@ -92,7 +92,7 @@
 }
 
 .content-bar {
-  margin: 0 auto;
+  margin: 0 auto 6.4rem auto;
   border-radius: 50px;
   border: 1px solid #b2beed;
   max-width: 80rem;
@@ -121,7 +121,27 @@
   padding: 2.2rem;
 }
 
-.active {
-  outline: 1px solid #b2beed;
+.content-box {
+  box-shadow: 0 0 6.4rem rgba(251, 120, 60, 0.25);
   border-radius: 50px;
+  padding: 6.4rem !important;
+}
+
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  font-size: 1.8em;
+  list-style: none;
+  line-height: 1.35;
+}
+
+.content-box h2 {
+  /* color: #7d85a6; */
+  color: #6b728e;
+}
+
+.why-text .bold {
+  /* color: #7d85a6; */
+  color: #6b728e;
 }

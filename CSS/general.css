@@ -47,6 +47,8 @@ Accent of #0D022E (Primary)
 
 
 --- 05 SHADOWS
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
 --- 06 BORDER-RADIUS
 Small: 8px
 
@@ -91,6 +93,7 @@ body {
 
 .heading-primary {
   font-size: 5.2rem;
+  margin-bottom: 4.4rem;
 }
 
 .heading-secondary {
@@ -110,4 +113,17 @@ body {
 
 .margin-bottom {
   margin-bottom: 6.4rem;
+}
+
+.active {
+  outline: 1px solid #b2beed;
+  border-radius: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.bold {
+  font-weight: 600;
 }
