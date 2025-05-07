@@ -89,6 +89,15 @@ body {
   margin: 0 auto;
 }
 
+.heading-primary {
+  font-size: 5.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  margin-bottom: 4.4rem;
+}
+
 .grid {
   display: grid;
   column-gap: 6.4rem;
@@ -97,4 +106,8 @@ body {
 
 .grid-2-cols {
   grid-template-columns: 1fr 1fr;
+}
+
+.margin-bottom {
+  margin-bottom: 6.4rem;
 }

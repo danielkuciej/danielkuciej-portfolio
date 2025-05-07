@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 9.6rem;
+  height: 8rem;
   padding: 0 4.8rem;
   position: relative;
 }
@@ -49,35 +49,37 @@
 
 /* ///// MAIN SECTION ///// */
 /* KIM JESTEM */
+
 .section-hero {
+  padding: 4.8rem 0;
 }
 
 .hero-box {
-  padding: 4.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
 }
 
-.left-box {
+.hero-text-box {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
+  justify-content: space-around;
 }
 
 .hero-description {
   font-size: 2.4rem;
-  margin-bottom: 2.4rem;
-}
-
-.heading-secondary {
-  font-size: 4.4rem;
   margin-bottom: 4.4rem;
 }
 
-.header-img {
-  height: 45%;
+.no-margin {
+  margin-bottom: 1.2rem !important;
 }
 
-/* PO CO MI STRONA? */
-.section-why {
-  height: 10rem;
-  background-color: #251b43;
+.hero-img-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero-img {
+  width: 80%;
 }
