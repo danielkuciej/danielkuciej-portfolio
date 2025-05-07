@@ -125,6 +125,7 @@
   box-shadow: 0 0 6.4rem rgba(251, 120, 60, 0.25);
   border-radius: 50px;
   padding: 6.4rem !important;
+  background-color: #21183c;
 }
 
 .why-list {
@@ -139,6 +140,18 @@
 .content-box h2 {
   /* color: #7d85a6; */
   color: #6b728e;
+}
+
+.why-text {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.icon-check {
+  padding-top: 0.4rem;
+  height: 2.4rem;
+  width: 2.4rem;
+  flex-shrink: 0;
 }
 
 .why-text .bold {
