@@ -69,6 +69,7 @@ Medium: 11px
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -78,7 +79,6 @@ body {
   color: #b2beed;
   background-color: #0d022e;
 
-  /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
 }
 
@@ -99,6 +99,13 @@ body {
 .heading-secondary {
   font-size: 4.4rem;
   margin-bottom: 4.4rem;
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+  text-transform: uppercase;
 }
 
 .grid {

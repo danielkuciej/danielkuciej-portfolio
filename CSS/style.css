@@ -158,3 +158,39 @@
   /* color: #7d85a6; */
   color: #6b728e;
 }
+
+/* PORTFOLIO */
+.section-portfolio {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-portfolio h3 {
+  padding-bottom: 9.6rem !important;
+  padding: 0 3.2rem;
+}
+
+.porftolio-container {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.port-box {
+  overflow: hidden;
+  border-radius: 30px;
+  border: 5px solid rgba(251, 120, 60, 0.5);
+}
+
+.port-box img {
+  transition: all 0.4s;
+}
+
+.port-box img:hover {
+  transform: scale(1.05);
+}
+
+.prev-img {
+  width: 100%;
+}
