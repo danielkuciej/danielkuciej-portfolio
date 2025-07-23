@@ -179,12 +179,19 @@
 
 .port-img-box {
   flex: 1;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .port-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.4s;
+}
+
+.port-img:hover {
+  transform: scale(1.04);
 }
 
 .port-content-box {
