@@ -148,13 +148,6 @@
   gap: 1.2rem;
 }
 
-.icon-check {
-  padding-top: 0.4rem;
-  height: 2.4rem;
-  width: 2.4rem;
-  flex-shrink: 0;
-}
-
 .why-text .bold {
   /* color: #7d85a6; */
   color: #6b728e;
@@ -162,7 +155,6 @@
 
 /* PORTFOLIO */
 .section-portfolio {
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 6.4rem 0;
@@ -178,41 +170,52 @@
   padding: 0 3.2rem 9.6rem 3.2rem;
 }
 
-.porftolio-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.4rem;
-}
-
 .port-box {
-  overflow: hidden;
+  display: flex;
   border-radius: 30px;
   border: 5px solid rgba(251, 120, 60, 0.5);
+  overflow: hidden;
+}
+
+.port-img-box {
+  flex: 1;
+}
+
+.port-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .port-content-box {
   padding: 1.6rem;
-}
-
-.port-img {
-  height: 50%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .heading-4 {
   font-size: 2rem;
-  padding: 1.2rem 0;
+  padding-bottom: 2.4rem;
 }
 
 .port-content-list {
-  display: flex;
-  flex-direction: column;
   gap: 1.2rem;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.port-content-list p {
+  margin-bottom: 0;
 }
 
 .port-text {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   display: flex;
+  align-items: center;
   gap: 0.8rem;
 }
 

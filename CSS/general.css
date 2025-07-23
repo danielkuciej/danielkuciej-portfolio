@@ -115,7 +115,7 @@ body {
 }
 
 .grid-2-cols {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .margin-bottom {
@@ -134,4 +134,10 @@ body {
 
 .bold {
   font-weight: 600;
+}
+
+.icon-check {
+  height: 2.4rem;
+  width: 2.4rem;
+  flex-shrink: 0;
 }
