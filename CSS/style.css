@@ -228,15 +228,19 @@
 
 /* CTA BAR */
 .section-cta-bar {
-  height: 10vh;
+  height: 10rem;
   background-color: #924e67;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .cta-bar-content {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 15%;
 }
 
 .cta-bar-text {
