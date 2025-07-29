@@ -160,18 +160,9 @@
   padding: 6.4rem 0;
 }
 
-.section-portfolio h3 {
-  padding: 0 3.2rem;
-  margin-bottom: 1.6rem;
-}
-
-.portfolio-text {
-  font-size: 1.6rem;
-  padding: 0 3.2rem 9.6rem 3.2rem;
-}
-
 .icon-box p {
   font-size: 1.4rem;
+  cursor: default;
 }
 
 .arrow-icon {
@@ -185,7 +176,7 @@
 
 .icon-box {
   position: absolute;
-  top: -3rem;
+  top: -3.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -273,7 +264,8 @@
   font-size: 2.4rem;
 }
 
-.cta-btn {
+.cta-btn:link,
+.cta-btn:visited {
   background-color: #fb773c;
   color: #251b43;
   padding: 1.2rem 1.6rem;
@@ -281,4 +273,44 @@
   font-size: 1.6rem;
   font-weight: 500;
   border: none;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.cta-btn:hover,
+.cta-btn:active {
+  background-color: #c95f30;
+}
+
+/* NASZA WSPÓŁPRACA */
+.section-collaboration {
+  background-color: #251b43;
+  justify-content: center;
+  align-items: center;
+  padding: 6.4rem 0;
+}
+
+.stage-number {
+  font-size: 2.4rem;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+.stage-content {
+  width: 12.8rem;
+  height: 12.8rem;
+  background-color: #924e67;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.stage-content p {
+  font-size: 1.8rem;
+}
+
+.stage-content:hover {
+  transform: scale(1.5);
 }

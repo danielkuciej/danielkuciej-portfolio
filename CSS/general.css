@@ -104,18 +104,23 @@ body {
 .heading-tertiary {
   font-size: 2.4rem;
   line-height: 1.2;
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.6rem;
   text-transform: uppercase;
 }
 
 .grid {
   display: grid;
+  place-items: center;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
 }
 
 .grid-2-cols {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .margin-bottom {
@@ -140,4 +145,9 @@ body {
   height: 2.4rem;
   width: 2.4rem;
   flex-shrink: 0;
+}
+
+.section-text {
+  font-size: 1.6rem;
+  padding: 0 3.2rem 9.6rem 0;
 }
