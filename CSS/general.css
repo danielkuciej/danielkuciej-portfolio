@@ -119,6 +119,10 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .grid-5-cols {
   grid-template-columns: repeat(5, 1fr);
 }
@@ -149,5 +153,9 @@ body {
 
 .section-text {
   font-size: 1.6rem;
-  padding: 0 3.2rem 9.6rem 0;
+  padding: 0 3.2rem 8rem 0;
+}
+
+.red-color {
+  color: rgba(255, 0, 0, 0.6);
 }
