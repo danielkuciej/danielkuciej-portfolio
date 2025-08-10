@@ -80,6 +80,7 @@ body {
   background-color: #0d022e;
 
   overflow-x: hidden;
+  border-bottom: 7px solid #fb773c;
 }
 
 /**************************/
@@ -143,6 +144,14 @@ body {
 
 .bold {
   font-weight: 600;
+}
+
+.thin {
+  font-weight: 400;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .icon-check {
