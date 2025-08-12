@@ -81,6 +81,7 @@ body {
 
   overflow-x: hidden;
   border-bottom: 7px solid #fb773c;
+  cursor: default;
 }
 
 /**************************/
@@ -94,7 +95,7 @@ body {
 
 .heading-primary {
   font-size: 5.2rem;
-  margin-bottom: 4.4rem;
+  /* margin-bottom: 4.4rem; */
 }
 
 .heading-secondary {

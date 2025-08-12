@@ -61,14 +61,15 @@
 }
 
 .hero-text-box {
+  padding: 8rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  gap: 4.8rem;
 }
 
 .hero-description {
   font-size: 2.4rem;
-  margin-bottom: 4.4rem;
+  /* margin-bottom: 4.4rem; */
 }
 
 .no-margin {
@@ -76,17 +77,19 @@
 }
 
 .hero-img-box {
-  display: flex;
-  justify-content: space-around;
+  width: 80%;
+  /* display: flex; */
+  /* justify-content: space-around; */
+  background-image: url(/img/Daniel.PNG);
+  background-size: cover;
+  background-position: center;
 }
 
-.hero-img {
-  width: 80%;
-}
+/* .hero-img {
+} */
 
 /* PO CO MI STRONA? */
 .section-why {
-  /* height: 100vh; */
   background-color: #251b43;
   padding: 9.6rem 0;
 }
@@ -350,7 +353,7 @@
   overflow: hidden;
 }
 
-.cta .heading-secondary {
+.cta .heading-primary {
   margin-bottom: 3.2rem;
 }
 
@@ -402,6 +405,7 @@
   background-color: #e4e0e1;
   border-radius: 9px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .cta-form input::placeholder,
