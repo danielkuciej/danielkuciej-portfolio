@@ -610,3 +610,13 @@
 .col-4 a {
   text-decoration: none;
 }
+
+.footer-links-box {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.footer-links-box .course {
+  color: inherit !important;
+  text-decoration: underline;
+}
