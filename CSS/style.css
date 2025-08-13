@@ -449,7 +449,8 @@
   padding: 1.2rem;
   font-size: 1.6rem;
   font-family: inherit;
-  color: inherit;
+  /* color: inherit; */
+  color: #aaa;
   border: none;
   background-color: #e4e0e1;
   border-radius: 9px;
