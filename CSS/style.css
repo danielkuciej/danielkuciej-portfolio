@@ -128,6 +128,7 @@
 }
 
 .content-bar-list {
+  position: relative;
   margin-bottom: 0;
   font-size: 1.6rem;
   display: flex;

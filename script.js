@@ -44,3 +44,10 @@ const colorObserver = new IntersectionObserver(
 sectionsObserve.forEach((section) => {
   colorObserver.observe(section);
 });
+
+///////////////////////////////////////////////////////////
+// Current year
+///////////////////////////////////////////////////////////
+const yearEl = document.querySelector(".year");
+const newYear = new Date().getFullYear();
+yearEl.textContent = newYear;
