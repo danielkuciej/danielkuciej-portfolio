@@ -349,22 +349,56 @@
 }
 
 .stage-content {
-  width: 12.8rem;
-  height: 12.8rem;
-  background-color: #924e67;
+  width: 19.2rem;
+  height: 19.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  perspective: 1000px;
+}
+
+.stage-content p {
+  font-size: 1.4rem;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.stage-content.is-flipped .card-inner {
+  transform: scale(1.5) rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s;
+  text-align: center;
+  padding: 1rem;
 }
 
-.stage-content p {
-  font-size: 1.8rem;
+.card-front {
+  background-color: #924e67;
+  color: inherit;
 }
 
-.stage-content:hover {
-  transform: scale(1.5);
+.card-back {
+  background-color: #924e67;
+  color: inherit;
+  transform: rotateY(180deg);
 }
 
 /* OPINIE */

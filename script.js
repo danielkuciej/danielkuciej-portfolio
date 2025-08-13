@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const contentBoxes = document.querySelectorAll(".section-why .content-box");
   const highlighter = document.querySelector(".highlighter");
 
-  // Funkcja do przesuwania "bąbelka"
+  // Funkcja do przesuwania aktywnego okna
   function moveHighlighter(targetTab) {
     const tabRect = targetTab.parentElement.getBoundingClientRect();
     const containerRect = tabsContainer.getBoundingClientRect();
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     tabs.forEach((tab) => tab.classList.remove("active"));
     tabToActivate.classList.add("active");
 
-    // 2. Przesunięcie "bąbelka"
+    // 2. Przesunięcie aktywnego okna
     moveHighlighter(tabToActivate);
 
     // 3. Pokazanie odpowiedniej treści
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Ustawienie stanu początkowego na podstawie domyślnie aktywnej zakładki
+  // Ustawienie stanu początkowego
   const initialActiveTab =
     document.querySelector(".content-bar-link.active") || tabs[0];
   if (initialActiveTab) {
@@ -96,9 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
     activateTab(initialActiveTab);
   }
 
-  // Nasłuchiwanie na kliknięcia w kontenerze zakładek (delegacja zdarzeń)
+  // Obserwowanie kliknięcia w kontenerze zakładek
   tabsContainer.addEventListener("click", function (e) {
-    // Sprawdzamy, czy kliknięto na link
+    // Sprawdzamy, czy kliknięto
     const clickedTab = e.target.closest(".content-bar-link");
     if (!clickedTab) return;
 
@@ -108,6 +108,36 @@ document.addEventListener("DOMContentLoaded", function () {
     // Aktywujemy klikniętą zakładkę
     activateTab(clickedTab);
   });
+});
+
+///////////////////////////////////////////////////////////
+// COLLABORATION CARD ANIMATION
+///////////////////////////////////////////////////////////
+const cards = document.querySelectorAll(".stage-content");
+
+// Nasłuchiwanie na kliknięcie
+cards.forEach((clickedCard) => {
+  clickedCard.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    // Pętla zamykająca inne otwarte karty
+    cards.forEach((card) => {
+      if (card !== clickedCard) {
+        card.classList.remove("is-flipped");
+      }
+    });
+
+    this.classList.toggle("is-flipped");
+  });
+});
+
+// Nasłuchiwanie na kliknięcie w cały dokument
+document.addEventListener("click", function (event) {
+  if (!event.target.closest(".stage-content")) {
+    cards.forEach((card) => {
+      card.classList.remove("is-flipped");
+    });
+  }
 });
 
 ///////////////////////////////////////////////////////////
