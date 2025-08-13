@@ -133,12 +133,6 @@ body {
   margin-bottom: 6.4rem;
 }
 
-.active {
-  outline: 1px solid #b2beed;
-  background-color: #21183c;
-  border-radius: 50px;
-}
-
 .hidden {
   display: none;
 }
