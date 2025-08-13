@@ -48,6 +48,14 @@
   background-color: #c95f30;
 }
 
+.course {
+  color: rgba(107, 114, 142, 0.8) !important;
+}
+
+.course:hover {
+  color: rgba(46, 204, 112, 0.85) !important;
+}
+
 /* STICKY NAV */
 .sticky .header {
   position: fixed;
