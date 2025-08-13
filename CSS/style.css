@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   gap: 4.8rem;
+  margin-bottom: 0;
 }
 
 .main-link-nav:link,
@@ -45,6 +46,30 @@
 .main-link-nav.nav-cta:hover,
 .main-link-nav.nav-cta:active {
   background-color: #c95f30;
+}
+
+/* STICKY NAV */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  transition: background-color 0.3s ease;
+}
+
+.sticky .header.nav-dark {
+  background-color: rgba(13, 2, 46, 0.95);
+}
+
+.sticky .header.nav-light {
+  background-color: rgba(37, 27, 67, 0.95);
+}
+
+.sticky .section-hero {
+  margin-top: 8rem;
 }
 
 /* ///// MAIN SECTION ///// */
