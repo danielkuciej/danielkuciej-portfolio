@@ -303,6 +303,74 @@
   gap: 0.8rem;
 }
 
+/* PORTFOLIO MODAL */
+.body-no-scroll {
+  overflow: hidden;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container.is-visible {
+  display: flex;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 2, 46, 0.85);
+}
+
+.modal-window {
+  position: relative;
+  background-color: #fff;
+  border: 5px solid #924e67;
+  border-radius: 30px;
+  width: 85vw;
+  height: 85vh;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.6rem;
+  right: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* CTA BAR */
 .section-cta-bar {
   height: 10rem;

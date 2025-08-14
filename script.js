@@ -111,6 +111,47 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 ///////////////////////////////////////////////////////////
+// MODAL
+///////////////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("portfolio-modal");
+  const modalImage = modal.querySelector(".modal-image");
+  const closeButton = modal.querySelector(".modal-close-btn");
+  const overlay = modal.querySelector(".modal-overlay");
+  const portfolioTriggers = document.querySelectorAll(".port-trigger");
+
+  // Funkcja otwierania modala
+  function openModal(fullImagePath) {
+    modalImage.src = fullImagePath;
+    modal.classList.add("is-visible");
+    document.body.classList.add("body-no-scroll");
+  }
+
+  // Funkcja zamykania modala
+  function closeModal() {
+    modal.classList.remove("is-visible");
+    document.body.classList.remove("body-no-scroll");
+  }
+
+  portfolioTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", function () {
+      const fullImage = this.dataset.fullImage;
+      openModal(fullImage);
+    });
+  });
+
+  // Zamykanie modala po kliknięciu w X, tło lub Esc
+  closeButton.addEventListener("click", closeModal);
+  overlay.addEventListener("click", closeModal);
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && modal.classList.contains("is-visible")) {
+      closeModal();
+    }
+  });
+});
+
+///////////////////////////////////////////////////////////
 // COLLABORATION CARD ANIMATION
 ///////////////////////////////////////////////////////////
 const cards = document.querySelectorAll(".stage-content");

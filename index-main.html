@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -355,9 +355,10 @@
               <div class="port-content">
                 <div class="port-img-box">
                   <img
-                    class="port-img"
+                    class="port-img port-trigger"
                     src="/img/Domi/Domi-prev.png"
                     alt="Opis zdjęcia numer 1"
+                    data-full-image="img/Domi/dominikamatejko fullpage.png"
                   />
                 </div>
                 <div class="port-content-box">
@@ -415,9 +416,10 @@
               <div class="port-content">
                 <div class="port-img-box">
                   <img
-                    class="port-img"
+                    class="port-img port-trigger"
                     src="/img/Szkolenie/Szkolenie-prev.png"
                     alt="Opis zdjęcia numer 1"
+                    data-full-image="img/Szkolenie/e-commerce business class course.png"
                   />
                 </div>
                 <div class="port-content-box">
@@ -475,9 +477,10 @@
               <div class="port-content">
                 <div class="port-img-box">
                   <img
-                    class="port-img"
+                    class="port-img port-trigger"
                     src="/img/Kamper/Kamper-prev.png"
                     alt="Opis zdjęcia numer 1"
+                    data-full-image="img/Kamper/nawakacjekamperem.png"
                   />
                 </div>
                 <div class="port-content-box">
@@ -495,7 +498,7 @@
                         class="icon-check"
                         name="checkmark-circle-outline"
                       ></ion-icon>
-                      <p>Dostosowana do każdego rodzaju urządzeń</p>
+                      <p>Strona zaimplementowana na WordPress</p>
                     </li>
                     <li class="port-text">
                       <ion-icon
@@ -509,6 +512,13 @@
                         class="icon-check"
                         name="checkmark-circle-outline"
                       ></ion-icon>
+                      <p>Dostosowana do każdego rodzaju urządzeń</p>
+                    </li>
+                    <li class="port-text">
+                      <ion-icon
+                        class="icon-check"
+                        name="checkmark-circle-outline"
+                      ></ion-icon>
                       <p>Dostosowany formularz kontaktowy</p>
                     </li>
                     <li class="port-text">
@@ -516,7 +526,9 @@
                         class="icon-check"
                         name="checkmark-circle-outline"
                       ></ion-icon>
-                      <p>Strona zaimplementowana na WordPress</p>
+                      <p>
+                        Zastosowany efekt paralaksy w centalnej części strony
+                      </p>
                     </li>
                   </ul>
                 </div>
@@ -980,6 +992,19 @@
         </div>
       </div>
     </footer>
+
+    <!-- MODAL -->
+    <div class="modal-container" id="portfolio-modal">
+      <div class="modal-overlay"></div>
+
+      <div class="modal-window">
+        <button class="modal-close-btn">&times;</button>
+
+        <div class="modal-content">
+          <img src="" alt="Podgląd całej strony" class="modal-image" />
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
