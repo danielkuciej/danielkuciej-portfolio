@@ -232,6 +232,7 @@
 
 .port-box {
   position: relative;
+  height: 100%;
 }
 
 .icon-box {
@@ -371,7 +372,7 @@
   display: block;
 }
 
-/* CTA BAR */
+/* PASEK CTA */
 .section-cta-bar {
   height: 10rem;
   background-color: #924e67;
