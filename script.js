@@ -46,6 +46,45 @@ sectionsObserve.forEach((section) => {
 });
 
 ///////////////////////////////////////////////////////////
+//MOBILE NAVIGATION
+///////////////////////////////////////////////////////////
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const allLinks = document.querySelectorAll("a:link");
+console.log(allLinks);
+
+btnNavEl.addEventListener("click", function () {
+  document.body.classList.toggle("nav-open");
+});
+
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    const href = link.getAttribute("href");
+
+    if (href === "#" || href.startsWith("#")) e.preventDefault();
+
+    // Scroll back to top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+    // Scroll to other links
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Close mobile navigation
+    if (link.classList.contains("main-link-nav")) {
+      if (document.body.classList.contains("nav-open")) {
+        document.body.classList.remove("nav-open");
+      }
+    }
+  });
+});
+
+///////////////////////////////////////////////////////////
 //WHY SECTION CONTENT ANIMATION
 ///////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function () {
