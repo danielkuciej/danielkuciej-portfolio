@@ -392,6 +392,11 @@
   display: block;
 }
 
+/* .lazy-img {
+  filter: blur(20px);
+  transition: filter 0.5s;
+} */
+
 /* PASEK CTA */
 .section-cta-bar {
   height: 10rem;

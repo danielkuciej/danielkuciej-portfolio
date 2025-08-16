@@ -251,6 +251,62 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   const modal = document.getElementById("portfolio-modal");
+//   const modalImage = modal.querySelector(".modal-image");
+//   const closeButton = modal.querySelector(".modal-close-btn");
+//   const overlay = modal.querySelector(".modal-overlay");
+//   const portfolioTriggers = document.querySelectorAll(".port-trigger");
+
+//   // --- NOWA LOGIKA ---
+//   // Dodajemy nasłuchiwanie na załadowanie obrazka w modalu
+//   // To usunie rozmycie, gdy ciężkie zdjęcie się w końcu pobierze.
+//   modalImage.addEventListener("load", function () {
+//     modalImage.classList.remove("lazy-img");
+//   });
+
+//   // Funkcja otwierania modala
+//   function openModal(fullImagePath) {
+//     // 1. Pokaż modal NATYCHMIAST z rozmytym placeholderem
+//     modal.classList.add("is-visible");
+//     document.body.classList.add("body-no-scroll");
+
+//     // 2. Dodaj klasę rozmycia (na wypadek, gdyby została usunięta wcześniej)
+//     modalImage.classList.add("lazy-img");
+
+//     // 3. Rozpocznij pobieranie ciężkiego obrazka
+//     // Przeglądarka podmieni placeholder dopiero, gdy ten obrazek się załaduje.
+//     modalImage.src = fullImagePath;
+//   }
+
+//   // Funkcja zamykania modala (resetuje obrazek do placeholdera)
+//   function closeModal() {
+//     modal.classList.remove("is-visible");
+//     document.body.classList.remove("body-no-scroll");
+//     // Resetujemy src, aby przy następnym otwarciu znów był placeholder
+//     modalImage.src =
+//       "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+//   }
+
+//   // Nasłuchiwanie na kliknięcie w portfolio (bez zmian)
+//   portfolioTriggers.forEach((trigger) => {
+//     trigger.addEventListener("click", function () {
+//       const fullImage = this.dataset.fullImage;
+//       openModal(fullImage);
+//     });
+//   });
+
+//   // Zamykanie modala (bez zmian)
+//   closeButton.addEventListener("click", closeModal);
+//   overlay.addEventListener("click", closeModal);
+
+//   document.addEventListener("keydown", function (event) {
+//     if (event.key === "Escape" && modal.classList.contains("is-visible")) {
+//       closeModal();
+//     }
+//   });
+// });
+
 ///////////////////////////////////////////////////////////
 // COLLABORATION CARD ANIMATION
 ///////////////////////////////////////////////////////////
