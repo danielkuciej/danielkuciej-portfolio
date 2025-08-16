@@ -392,10 +392,10 @@
   display: block;
 }
 
-/* .lazy-img {
+.lazy-img {
   filter: blur(20px);
   transition: filter 0.5s;
-} */
+}
 
 /* PASEK CTA */
 .section-cta-bar {
