@@ -87,64 +87,125 @@ allLinks.forEach(function (link) {
 ///////////////////////////////////////////////////////////
 //WHY SECTION CONTENT ANIMATION
 ///////////////////////////////////////////////////////////
+// document.addEventListener("DOMContentLoaded", function () {
+//   const tabsContainer = document.querySelector(".content-bar-list");
+//   const tabs = document.querySelectorAll(".content-bar-link");
+//   const contentBoxes = document.querySelectorAll(".section-why .content-box");
+//   const highlighter = document.querySelector(".highlighter");
+
+//   // Funkcja do przesuwania aktywnego okna
+//   function moveHighlighter(targetTab) {
+//     const tabRect = targetTab.parentElement.getBoundingClientRect();
+//     const containerRect = tabsContainer.getBoundingClientRect();
+
+//     const leftPosition = tabRect.left - containerRect.left;
+//     const width = tabRect.width;
+
+//     highlighter.style.width = `${width}px`;
+//     highlighter.style.transform = `translateX(${leftPosition}px)`;
+//   }
+
+//   // Funkcja do aktywacji zakładki i treści
+//   function activateTab(tabToActivate) {
+//     // 1. Obsługa klas aktywności dla linków
+//     tabs.forEach((tab) => tab.classList.remove("active"));
+//     tabToActivate.classList.add("active");
+
+//     // 2. Przesunięcie aktywnego okna
+//     moveHighlighter(tabToActivate);
+
+//     // 3. Pokazanie odpowiedniej treści
+//     const tabIndex = Array.from(tabs).indexOf(tabToActivate);
+//     contentBoxes.forEach((box, index) => {
+//       if (index === tabIndex) {
+//         box.classList.remove("hidden");
+//       } else {
+//         box.classList.add("hidden");
+//       }
+//     });
+//   }
+
+//   // Ustawienie stanu początkowego
+//   const initialActiveTab =
+//     document.querySelector(".content-bar-link.active") || tabs[0];
+//   if (initialActiveTab) {
+//     // Ukrywamy wszystkie boxy na starcie
+//     contentBoxes.forEach((box) => box.classList.add("hidden"));
+//     // Aktywujemy pierwszą zakładkę
+//     activateTab(initialActiveTab);
+//   }
+
+//   // Obserwowanie kliknięcia w kontenerze zakładek
+//   tabsContainer.addEventListener("click", function (e) {
+//     // Sprawdzamy, czy kliknięto
+//     const clickedTab = e.target.closest(".content-bar-link");
+//     if (!clickedTab) return;
+
+//     // Zapobiegamy domyślnej akcji linku
+//     e.preventDefault();
+
+//     // Aktywujemy klikniętą zakładkę
+//     activateTab(clickedTab);
+//   });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
   const tabsContainer = document.querySelector(".content-bar-list");
   const tabs = document.querySelectorAll(".content-bar-link");
   const contentBoxes = document.querySelectorAll(".section-why .content-box");
   const highlighter = document.querySelector(".highlighter");
 
-  // Funkcja do przesuwania aktywnego okna
+  // === ZMODYFIKOWANA FUNKCJA ===
   function moveHighlighter(targetTab) {
     const tabRect = targetTab.parentElement.getBoundingClientRect();
     const containerRect = tabsContainer.getBoundingClientRect();
 
-    const leftPosition = tabRect.left - containerRect.left;
-    const width = tabRect.width;
+    // Sprawdzamy, jaki jest aktualny kierunek layoutu w CSS
+    const layoutDirection = getComputedStyle(tabsContainer).flexDirection;
 
-    highlighter.style.width = `${width}px`;
-    highlighter.style.transform = `translateX(${leftPosition}px)`;
+    if (layoutDirection === "column") {
+      // --- LOGIKA DLA UKŁADU PIONOWEGO (MOBILE) ---
+      const topPosition = tabRect.top - containerRect.top;
+      const height = tabRect.height;
+
+      highlighter.style.height = `${height}px`;
+      highlighter.style.width = "100%"; // Upewniamy się, że szerokość jest pełna
+      highlighter.style.transform = `translateY(${topPosition}px)`;
+    } else {
+      // --- LOGIKA DLA UKŁADU POZIOMEGO (DESKTOP) ---
+      const leftPosition = tabRect.left - containerRect.left;
+      const width = tabRect.width;
+
+      highlighter.style.width = `${width}px`;
+      highlighter.style.height = "100%"; // Upewniamy się, że wysokość jest pełna
+      highlighter.style.transform = `translateX(${leftPosition}px)`;
+    }
   }
 
-  // Funkcja do aktywacji zakładki i treści
+  // Funkcja aktywacji (bez zmian)
   function activateTab(tabToActivate) {
-    // 1. Obsługa klas aktywności dla linków
     tabs.forEach((tab) => tab.classList.remove("active"));
     tabToActivate.classList.add("active");
-
-    // 2. Przesunięcie aktywnego okna
     moveHighlighter(tabToActivate);
-
-    // 3. Pokazanie odpowiedniej treści
     const tabIndex = Array.from(tabs).indexOf(tabToActivate);
     contentBoxes.forEach((box, index) => {
-      if (index === tabIndex) {
-        box.classList.remove("hidden");
-      } else {
-        box.classList.add("hidden");
-      }
+      box.classList.toggle("hidden", index !== tabIndex);
     });
   }
 
-  // Ustawienie stanu początkowego
+  // Ustawienie stanu początkowego (bez zmian)
   const initialActiveTab =
     document.querySelector(".content-bar-link.active") || tabs[0];
   if (initialActiveTab) {
-    // Ukrywamy wszystkie boxy na starcie
     contentBoxes.forEach((box) => box.classList.add("hidden"));
-    // Aktywujemy pierwszą zakładkę
     activateTab(initialActiveTab);
   }
 
-  // Obserwowanie kliknięcia w kontenerze zakładek
+  // Obserwowanie kliknięcia (bez zmian)
   tabsContainer.addEventListener("click", function (e) {
-    // Sprawdzamy, czy kliknięto
     const clickedTab = e.target.closest(".content-bar-link");
     if (!clickedTab) return;
-
-    // Zapobiegamy domyślnej akcji linku
     e.preventDefault();
-
-    // Aktywujemy klikniętą zakładkę
     activateTab(clickedTab);
   });
 });

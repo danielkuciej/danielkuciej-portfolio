@@ -56,10 +56,6 @@
     padding: 4.8rem !important;
   }
 
-  .heading-4 {
-    font-size: 1.8rem;
-  }
-
   .port-content-box {
     flex: 1.2;
   }
@@ -374,12 +370,158 @@
 /* BELOW 544px (Phones) */
 /**************************/
 @media (max-width: 34em) {
+  .section-hero {
+    padding: 1.6rem 3.2rem 3.2rem;
+  }
+
+  .hero-box {
+    flex-direction: column;
+  }
+
+  .hero-text-box {
+    padding: 1.2rem 0 4.8rem 0;
+  }
+
+  .hero-img-box {
+    width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .section-why {
+    padding: 9.6rem 3.2rem;
+  }
+
+  .content-bar {
+    margin: 0 auto 4.8rem auto;
+    border-radius: 15px;
+  }
+
+  .content-bar-list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .content-bar-list {
+    flex-direction: column;
+  }
+
+  .highlighter {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+
+    transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
+  }
+
+  .content-box {
+    padding: 1.6rem !important;
+    border-radius: 25px;
+  }
+
+  .content-box .heading-secondary {
+    font-size: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .why-list {
+    padding-left: 0;
+    gap: 1.2rem;
+    margin: 0;
+  }
+
+  .portfolio-container {
+    padding: 0 3.2rem;
+  }
+
+  .port-content-box {
+    flex: 1.1;
+    padding: 1.2rem;
+  }
+
+  .heading-4 {
+    font-size: 1.8rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .section-cta-bar {
+    height: auto;
+    padding: 3.2rem;
+  }
+
+  .cta-bar-content {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .section-collaboration {
+    padding: 9.6rem 0;
+  }
+
+  .section-text {
+    font-size: 1.4rem;
+    padding: 0 0 4.8rem 0;
+    margin: 0;
+  }
+
+  .collab .grid-5-cols {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3 1fr);
+  }
+
+  .stage-1 {
+    grid-column: 1 / 2;
+  }
+
+  .stage-2 {
+    grid-column: 2 / -1;
+  }
+
+  .stage-3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .stage-4 {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+  }
+
+  .stage-5 {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+
+  .stage-content.is-flipped .card-inner {
+    transform: scale(1.4) rotateY(180deg);
+  }
+
+  .grid-3-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    border-radius: 25px;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+
+  .cta-text-box .heading-primary {
+    font-size: 3rem;
+  }
+
+  .cta-text {
+    font-size: 1.6rem;
+  }
+
+  .btn-form {
+    margin-top: 2.4rem;
+  }
+
+  .footer-links-box {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 }
-
-/* 
-- Font sizes (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-- Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-*/

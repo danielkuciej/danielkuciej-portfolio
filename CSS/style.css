@@ -135,9 +135,6 @@
   background-position: center;
 }
 
-/* .hero-img {
-} */
-
 /* PO CO MI STRONA? */
 .section-why {
   background-color: #251b43;
@@ -234,7 +231,12 @@
 .section-portfolio {
   justify-content: center;
   align-items: center;
-  padding: 6.4rem 0;
+  padding: 9.6rem 0;
+}
+
+.section-text {
+  font-size: 1.6rem;
+  padding: 0 3.2rem 8rem 0;
 }
 
 .icon-box p {
@@ -299,6 +301,7 @@
 .heading-4 {
   font-size: 2rem;
   padding-bottom: 2.4rem;
+  margin-bottom: 0;
 }
 
 .port-content-list {
@@ -498,7 +501,7 @@
 
 /* OPINIE */
 .section-feedback {
-  padding: 6.4rem 0;
+  padding: 9.6rem 0;
 }
 
 .feedback-box {
@@ -520,7 +523,7 @@
 
 /* FORMULARZ */
 .section-cta {
-  padding: 8rem 0;
+  padding: 9.6rem 0;
   background-color: #251b43;
 }
 
@@ -545,17 +548,6 @@
   line-height: 1.8;
   margin-bottom: 4.8rem;
 }
-
-/* .cta-img-box {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(168, 113, 156, 0.2),
-      rgba(156, 93, 141, 0.2)
-    ),
-    url("../IMG/Domi/domi-6.jpeg");
-  background-size: cover;
-  background-position: center;
-} */
 
 .cta-form {
   display: grid;
@@ -646,6 +638,7 @@
 }
 
 .col-2 .main-nav-list {
+  padding: 0;
   gap: 0;
 }
 
