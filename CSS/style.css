@@ -460,6 +460,12 @@
   cursor: pointer;
   transition: all 0.3s;
   perspective: 1000px;
+  position: relative;
+  z-index: 1;
+}
+
+.stage-content.is-flipped {
+  z-index: 900;
 }
 
 .stage-content p {
